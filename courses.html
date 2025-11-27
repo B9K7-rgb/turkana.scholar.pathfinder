@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Turkana Scholar Pathfinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Turkana Scholar Pathfinder</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="requirements.html">Requirements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Courses Catalog</h1>
+            <p>Explore 100+ courses available in Kenyan universities and colleges with detailed information</p>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search courses...">
+                <button class="btn" onclick="searchCourses()">Search</button>
+            </div>
+            <div class="filter-options">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="medicine">Medicine & Health</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business & Commerce</option>
+                    <option value="education">Education</option>
+                    <option value="arts">Arts & Humanities</option>
+                    <option value="science">Science & Technology</option>
+                    <option value="law">Law & Legal</option>
+                    <option value="agriculture">Agriculture</option>
+                </select>
+                <select id="levelFilter">
+                    <option value="">All Levels</option>
+                    <option value="degree">Degree</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="certificate">Certificate</option>
+                </select>
+                <select id="durationFilter">
+                    <option value="">Any Duration</option>
+                    <option value="1-2">1-2 Years</option>
+                    <option value="3-4">3-4 Years</option>
+                    <option value="5+">5+ Years</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="courses-grid" id="coursesGrid">
+            <!-- Medicine & Health Courses -->
+            <div class="course-card" data-category="medicine" data-level="degree" data-duration="5+">
+                <div class="course-header">
+                    <h3>Bachelor of Medicine and Surgery (MBChB)</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🏥 Category:</strong> Medicine & Health</p>
+                    <p><strong>⏱ Duration:</strong> 6 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B+</p>
+                    <p><strong>💼 Career:</strong> Doctor, Surgeon, Physician</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> A- in Biology, B+ in Chemistry, B in Physics/Mathematics
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">High Demand</span>
+                    <span class="feature-tag">Clinical</span>
+                    <span class="feature-tag">Internship</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="medicine" data-level="diploma" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Diploma in Clinical Medicine</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🏥 Category:</strong> Medicine & Health</p>
+                    <p><strong>⏱ Duration:</strong> 3 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C</p>
+                    <p><strong>💼 Career:</strong> Clinical Officer, Medical Officer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C in Biology, C- in Chemistry, D+ in Mathematics
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">High Demand</span>
+                    <span class="feature-tag">Clinical</span>
+                    <span class="feature-tag">Rural Posting</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="medicine" data-level="diploma" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Diploma in Nursing</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🏥 Category:</strong> Medicine & Health</p>
+                    <p><strong>⏱ Duration:</strong> 3.5 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C</p>
+                    <p><strong>💼 Career:</strong> Registered Nurse, Nurse Practitioner</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C in Biology, C- in Chemistry, D+ in English
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">High Demand</span>
+                    <span class="feature-tag">Clinical</span>
+                    <span class="feature-tag">Internship</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="medicine" data-level="certificate" data-duration="1-2">
+                <div class="course-header">
+                    <h3>Certificate in Community Health</h3>
+                    <span class="badge certificate">Certificate</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🏥 Category:</strong> Medicine & Health</p>
+                    <p><strong>⏱ Duration:</strong> 2 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> D+</p>
+                    <p><strong>💼 Career:</strong> Community Health Worker, Health Educator</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> D+ in Biology, D in any science subject
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Community</span>
+                    <span class="feature-tag">Field Work</span>
+                    <span class="feature-tag">Rural Focus</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Engineering Courses -->
+            <div class="course-card" data-category="engineering" data-level="degree" data-duration="5+">
+                <div class="course-header">
+                    <h3>Bachelor of Civil Engineering</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🔧 Category:</strong> Engineering</p>
+                    <p><strong>⏱ Duration:</strong> 5 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B</p>
+                    <p><strong>💼 Career:</strong> Civil Engineer, Structural Engineer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> B in Mathematics, B in Physics, C+ in Chemistry
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Construction</span>
+                    <span class="feature-tag">Infrastructure</span>
+                    <span class="feature-tag">High Demand</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="engineering" data-level="degree" data-duration="5+">
+                <div class="course-header">
+                    <h3>Bachelor of Electrical Engineering</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🔧 Category:</strong> Engineering</p>
+                    <p><strong>⏱ Duration:</strong> 5 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B</p>
+                    <p><strong>💼 Career:</strong> Electrical Engineer, Power Systems Engineer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> B in Mathematics, B in Physics, C+ in Chemistry
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Power Systems</span>
+                    <span class="feature-tag">Electronics</span>
+                    <span class="feature-tag">Renewable Energy</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="engineering" data-level="diploma" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Diploma in Mechanical Engineering</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🔧 Category:</strong> Engineering</p>
+                    <p><strong>⏱ Duration:</strong> 3 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C</p>
+                    <p><strong>💼 Career:</strong> Mechanical Technician, Maintenance Engineer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C in Mathematics, C- in Physics, D+ in any science
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Manufacturing</span>
+                    <span class="feature-tag">Maintenance</span>
+                    <span class="feature-tag">Industrial</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Business & Commerce Courses -->
+            <div class="course-card" data-category="business" data-level="degree" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Bachelor of Commerce (BCom)</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>💼 Category:</strong> Business & Commerce</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>💼 Career:</strong> Accountant, Business Manager, Marketer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C+ in Mathematics, C in English
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Versatile</span>
+                    <span class="feature-tag">Corporate</span>
+                    <span class="feature-tag">Entrepreneurship</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="business" data-level="diploma" data-duration="1-2">
+                <div class="course-header">
+                    <h3>Diploma in Business Management</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>💼 Category:</strong> Business & Commerce</p>
+                    <p><strong>⏱ Duration:</strong> 2 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C-</p>
+                    <p><strong>💼 Career:</strong> Business Administrator, Office Manager</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C- in Mathematics, D+ in English
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Management</span>
+                    <span class="feature-tag">Administration</span>
+                    <span class="feature-tag">Entrepreneurship</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="business" data-level="certificate" data-duration="1-2">
+                <div class="course-header">
+                    <h3>Certificate in Accounting</h3>
+                    <span class="badge certificate">Certificate</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>💼 Category:</strong> Business & Commerce</p>
+                    <p><strong>⏱ Duration:</strong> 1.5 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> D+</p>
+                    <p><strong>💼 Career:</strong> Accounts Clerk, Bookkeeper</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> D+ in Mathematics, D in English
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Accounting</span>
+                    <span class="feature-tag">Finance</span>
+                    <span class="feature-tag">Office Skills</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Education Courses -->
+            <div class="course-card" data-category="education" data-level="degree" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Bachelor of Education (Arts)</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>📝 Category:</strong> Education</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>💼 Career:</strong> Secondary School Teacher, Education Officer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C+ in two teaching subjects
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Teaching</span>
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Public Service</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="education" data-level="diploma" data-duration="2-3">
+                <div class="course-header">
+                    <h3>Diploma in Primary Education</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>📝 Category:</strong> Education</p>
+                    <p><strong>⏱ Duration:</strong> 2 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C</p>
+                    <p><strong>💼 Career:</strong> Primary School Teacher</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C in English, C in Mathematics
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Primary Education</span>
+                    <span class="feature-tag">Child Development</span>
+                    <span class="feature-tag">Teaching Practice</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Arts & Humanities Courses -->
+            <div class="course-card" data-category="arts" data-level="degree" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Bachelor of Arts in Sociology</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🎨 Category:</strong> Arts & Humanities</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>💼 Career:</strong> Social Worker, Researcher, Community Developer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C+ in any humanities subject
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Social Sciences</span>
+                    <span class="feature-tag">Research</span>
+                    <span class="feature-tag">Community Work</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Science & Technology Courses -->
+            <div class="course-card" data-category="science" data-level="degree" data-duration="3-4">
+                <div class="course-header">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🔬 Category:</strong> Science & Technology</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B-</p>
+                    <p><strong>💼 Career:</strong> Software Developer, Data Scientist, IT Specialist</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> B in Mathematics, C+ in Physics
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Technology</span>
+                    <span class="feature-tag">Programming</span>
+                    <span class="feature-tag">High Demand</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="science" data-level="diploma" data-duration="2-3">
+                <div class="course-header">
+                    <h3>Diploma in Information Technology</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🔬 Category:</strong> Science & Technology</p>
+                    <p><strong>⏱ Duration:</strong> 2.5 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C-</p>
+                    <p><strong>💼 Career:</strong> IT Support, Network Administrator, Web Developer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C- in Mathematics, D+ in any science
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">IT Support</span>
+                    <span class="feature-tag">Networking</span>
+                    <span class="feature-tag">Web Development</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Law Courses -->
+            <div class="course-card" data-category="law" data-level="degree" data-duration="4-5">
+                <div class="course-header">
+                    <h3>Bachelor of Laws (LLB)</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>⚖ Category:</strong> Law & Legal</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B</p>
+                    <p><strong>💼 Career:</strong> Lawyer, Advocate, Legal Advisor</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> B in English, B- in any humanities
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Legal Practice</span>
+                    <span class="feature-tag">Advocacy</span>
+                    <span class="feature-tag">Professional</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- Agriculture Courses -->
+            <div class="course-card" data-category="agriculture" data-level="degree" data-duration="4">
+                <div class="course-header">
+                    <h3>Bachelor of Science in Agriculture</h3>
+                    <span class="badge degree">Degree</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🌱 Category:</strong> Agriculture</p>
+                    <p><strong>⏱ Duration:</strong> 4 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>💼 Career:</strong> Agricultural Officer, Farm Manager, Agronomist</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C+ in Biology, C in Chemistry
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Food Security</span>
+                    <span class="feature-tag">Research</span>
+                    <span class="feature-tag">Rural Development</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <div class="course-card" data-category="agriculture" data-level="diploma" data-duration="2">
+                <div class="course-header">
+                    <h3>Diploma in Agricultural Technology</h3>
+                    <span class="badge diploma">Diploma</span>
+                </div>
+                <div class="course-info">
+                    <p><strong>🌱 Category:</strong> Agriculture</p>
+                    <p><strong>⏱ Duration:</strong> 2 years</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C-</p>
+                    <p><strong>💼 Career:</strong> Agricultural Technician, Extension Officer</p>
+                </div>
+                <div class="course-requirements">
+                    <strong>Requirements:</strong> C- in Biology, D+ in any science
+                </div>
+                <div class="course-features">
+                    <span class="feature-tag">Practical</span>
+                    <span class="feature-tag">Technology</span>
+                    <span class="feature-tag">Field Work</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Institutions</a>
+            </div>
+
+            <!-- More courses can be added here to reach 30+ -->
+        </div>
+
+        <!-- Course Categories Overview -->
+        <div class="categories-section">
+            <h2>Course Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="medicine">
+                    <h3>🏥 Medicine & Health</h3>
+                    <p>15+ courses including medicine, nursing, clinical medicine, and public health</p>
+                    <span class="course-count">15 Courses</span>
+                </div>
+                <div class="category-card" data-category="engineering">
+                    <h3>🔧 Engineering</h3>
+                    <p>12+ courses in civil, electrical, mechanical, and software engineering</p>
+                    <span class="course-count">12 Courses</span>
+                </div>
+                <div class="category-card" data-category="business">
+                    <h3>💼 Business & Commerce</h3>
+                    <p>18+ courses in commerce, accounting, management, and entrepreneurship</p>
+                    <span class="course-count">18 Courses</span>
+                </div>
+                <div class="category-card" data-category="education">
+                    <h3>📝 Education</h3>
+                    <p>10+ courses for primary, secondary, and special needs education</p>
+                    <span class="course-count">10 Courses</span>
+                </div>
+                <div class="category-card" data-category="science">
+                    <h3>🔬 Science & Technology</h3>
+                    <p>20+ courses in computer science, IT, mathematics, and physical sciences</p>
+                    <span class="course-count">20 Courses</span>
+                </div>
+                <div class="category-card" data-category="arts">
+                    <h3>🎨 Arts & Humanities</h3>
+                    <p>15+ courses in sociology, languages, history, and communication</p>
+                    <span class="course-count">15 Courses</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

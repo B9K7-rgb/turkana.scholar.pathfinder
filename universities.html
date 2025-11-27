@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities - Turkana Scholar Pathfinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Turkana Scholar Pathfinder</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="universities.html" class="active">Universities</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="requirements.html">Requirements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Kenyan Universities Directory</h1>
+            <p>Explore 30+ universities in Kenya with detailed information about programs, admissions, and requirements</p>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search universities...">
+                <button class="btn" onclick="searchUniversities()">Search</button>
+            </div>
+            <div class="filter-options">
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                    <option value="nairobi">Nairobi</option>
+                    <option value="eldoret">Eldoret</option>
+                    <option value="nakuru">Nakuru</option>
+                    <option value="kisumu">Kisumu</option>
+                    <option value="mombasa">Mombasa</option>
+                    <option value="thika">Thika</option>
+                    <option value="nyeri">Nyeri</option>
+                    <option value="machakos">Machakos</option>
+                </select>
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Universities Grid -->
+        <div class="universities-grid" id="universitiesGrid">
+            <!-- Public Universities -->
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>University of Nairobi</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 200+</p>
+                    <p><strong>📞 Contact:</strong> 020-491-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Medicine</span>
+                    <span class="feature-tag">Engineering</span>
+                    <span class="feature-tag">Law</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Kenyatta University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 150+</p>
+                    <p><strong>📞 Contact:</strong> 020-870-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Arts</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="eldoret" data-type="public">
+                <div class="university-header">
+                    <h3>Moi University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Eldoret</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 120+</p>
+                    <p><strong>📞 Contact:</strong> 053-435-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Medicine</span>
+                    <span class="feature-tag">Forestry</span>
+                    <span class="feature-tag">IT</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="kisumu" data-type="public">
+                <div class="university-header">
+                    <h3>Maseno University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Kisumu</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 100+</p>
+                    <p><strong>📞 Contact:</strong> 057-351-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Public Health</span>
+                    <span class="feature-tag">Linguistics</span>
+                    <span class="feature-tag">Agriculture</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nakuru" data-type="public">
+                <div class="university-header">
+                    <h3>Egerton University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nakuru</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 90+</p>
+                    <p><strong>📞 Contact:</strong> 051-221-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Agriculture</span>
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Environmental Science</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Technical University of Kenya</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 80+</p>
+                    <p><strong>📞 Contact:</strong> 020-267-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Engineering</span>
+                    <span class="feature-tag">Technology</span>
+                    <span class="feature-tag">Applied Sciences</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="mombasa" data-type="public">
+                <div class="university-header">
+                    <h3>Technical University of Mombasa</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Mombasa</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 70+</p>
+                    <p><strong>📞 Contact:</strong> 041-249-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Maritime</span>
+                    <span class="feature-tag">Engineering</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nyeri" data-type="public">
+                <div class="university-header">
+                    <h3>Dedan Kimathi University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nyeri</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 60+</p>
+                    <p><strong>📞 Contact:</strong> 061-205-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Engineering</span>
+                    <span class="feature-tag">Computer Science</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="thika" data-type="public">
+                <div class="university-header">
+                    <h3>Mount Kenya University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Thika</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 100+</p>
+                    <p><strong>📞 Contact:</strong> 067-280-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Medicine</span>
+                    <span class="feature-tag">Law</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="machakos" data-type="public">
+                <div class="university-header">
+                    <h3>Machakos University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Machakos</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 50+</p>
+                    <p><strong>📞 Contact:</strong> 044-204-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Agriculture</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="kisumu" data-type="public">
+                <div class="university-header">
+                    <h3>Jaramogi Oginga Odinga University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Kisumu</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 40+</p>
+                    <p><strong>📞 Contact:</strong> 057-250-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Health Sciences</span>
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Agriculture</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Multimedia University of Kenya</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 45+</p>
+                    <p><strong>📞 Contact:</strong> 020-207-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Media</span>
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Engineering</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Karatina University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 35+</p>
+                    <p><strong>📞 Contact:</strong> 061-205-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Agriculture</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Education</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Kirinyaga University</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 30+</p>
+                    <p><strong>📞 Contact:</strong> 020-267-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Engineering</span>
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="public">
+                <div class="university-header">
+                    <h3>Meru University of Science & Technology</h3>
+                    <span class="badge public">Public</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 40+</p>
+                    <p><strong>📞 Contact:</strong> 064-303-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Science</span>
+                    <span class="feature-tag">Technology</span>
+                    <span class="feature-tag">Engineering</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <!-- Private Universities -->
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>United States International University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 80+</p>
+                    <p><strong>📞 Contact:</strong> 020-360-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Psychology</span>
+                    <span class="feature-tag">International Relations</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Strathmore University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> B</p>
+                    <p><strong>📚 Programs:</strong> 60+</p>
+                    <p><strong>📞 Contact:</strong> 070-303-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Law</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Catholic University of Eastern Africa</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 70+</p>
+                    <p><strong>📞 Contact:</strong> 020-890-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Daystar University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 50+</p>
+                    <p><strong>📞 Contact:</strong> 078-880-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Communication</span>
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Africa Nazarene University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 40+</p>
+                    <p><strong>📞 Contact:</strong> 020-252-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Law</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>KCA University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 55+</p>
+                    <p><strong>📞 Contact:</strong> 020-327-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Finance</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Scott Christian University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 30+</p>
+                    <p><strong>📞 Contact:</strong> 044-442-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Education</span>
+                    <span class="feature-tag">Business</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Adventist University of Africa</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 25+</p>
+                    <p><strong>📞 Contact:</strong> 020-600-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Health</span>
+                    <span class="feature-tag">Education</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Presbyterian University of East Africa</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 35+</p>
+                    <p><strong>📞 Contact:</strong> 020-200-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Education</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Gretsa University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 30+</p>
+                    <p><strong>📞 Contact:</strong> 067-280-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Hospitality</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Kabarak University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 45+</p>
+                    <p><strong>📞 Contact:</strong> 051-343-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Law</span>
+                    <span class="feature-tag">Education</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>St. Paul's University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 40+</p>
+                    <p><strong>📞 Contact:</strong> 020-200-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Communication</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Uzima University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 20+</p>
+                    <p><strong>📞 Contact:</strong> 057-250-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Medicine</span>
+                    <span class="feature-tag">Health Sciences</span>
+                    <span class="feature-tag">Nursing</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Tangaza University College</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 25+</p>
+                    <p><strong>📞 Contact:</strong> 020-890-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Theology</span>
+                    <span class="feature-tag">Social Work</span>
+                    <span class="feature-tag">Education</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Riara University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 30+</p>
+                    <p><strong>📞 Contact:</strong> 070-930-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Law</span>
+                    <span class="feature-tag">Communication</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+
+            <div class="university-card" data-location="nairobi" data-type="private">
+                <div class="university-header">
+                    <h3>Zetech University</h3>
+                    <span class="badge private">Private</span>
+                </div>
+                <div class="university-info">
+                    <p><strong>📍 Location:</strong> Nairobi</p>
+                    <p><strong>🎓 Minimum Grade:</strong> C+</p>
+                    <p><strong>📚 Programs:</strong> 35+</p>
+                    <p><strong>📞 Contact:</strong> 071-050-0000</p>
+                </div>
+                <div class="university-features">
+                    <span class="feature-tag">IT</span>
+                    <span class="feature-tag">Business</span>
+                    <span class="feature-tag">Media</span>
+                </div>
+                <a href="#" class="btn btn-outline">View Details</a>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2>University Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>30</h3>
+                    <p>Total Universities</p>
+                </div>
+                <div class="stat-card">
+                    <h3>18</h3>
+                    <p>Public Universities</p>
+                </div>
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Private Universities</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1500+</h3>
+                    <p>Total Programs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

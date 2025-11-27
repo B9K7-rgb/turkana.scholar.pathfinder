@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Turkana Scholar Pathfinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Turkana Scholar Pathfinder</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="requirements.html">Requirements</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>Get in touch with Turkana County Education Office for guidance and support on educational opportunities</p>
+        </div>
+
+        <!-- Official Contact Section -->
+        <section class="official-contact-section">
+            <h2>🏛 Official County Education Contact</h2>
+            <div class="official-contact-card">
+                <div class="official-avatar">👨‍💼</div>
+                <div class="official-info">
+                    <h3>Turkana County Chief Officer - Education</h3>
+                    <p class="official-title">Chief Officer, Education & Vocational Training</p>
+                    <p class="official-department">Turkana County Government</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <strong>📞 Office Line:</strong>
+                            <span>+254 700 000 000</span>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>📧 Email:</strong>
+                            <span>education@turkana.go.ke</span>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>📍 Address:</strong>
+                            <span>Turkana County Headquarters, Lodwar</span>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>🕒 Office Hours:</strong>
+                            <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-buttons">
+                        <button class="btn-official" onclick="contactOffice()">Contact Office</button>
+                        <button class="btn-email" onclick="sendEmail()">Send Email</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- County Education Offices -->
+        <section class="offices-section">
+            <h2>📋 County Education Offices</h2>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h3>📚 Scholarships Office</h3>
+                    <p>Information and application support for scholarships and bursaries</p>
+                    <div class="office-contact">
+                        <strong>Contact:</strong> +254 700 000 001
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri, 8AM-1PM
+                    </div>
+                </div>
+
+                <div class="office-card">
+                    <h3>🎓 University Placement</h3>
+                    <p>Guidance on university applications and KUCCPS placement</p>
+                    <div class="office-contact">
+                        <strong>Contact:</strong> +254 700 000 002
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri, 8AM-3PM
+                    </div>
+                </div>
+
+                <div class="office-card">
+                    <h3>🔧 Vocational Training</h3>
+                    <p>Information on technical colleges and vocational courses</p>
+                    <div class="office-contact">
+                        <strong>Contact:</strong> +254 700 000 003
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri, 9AM-4PM
+                    </div>
+                </div>
+
+                <div class="office-card">
+                    <h3>ℹ General Inquiries</h3>
+                    <p>General education information and guidance services</p>
+                    <div class="office-contact">
+                        <strong>Contact:</strong> +254 700 000 004
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri, 8AM-5PM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <h2>✉ Send Official Inquiry</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location in Turkana *</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select your location</option>
+                        <option value="lodwar">Lodwar Town</option>
+                        <option value="kakuma">Kakuma</option>
+                        <option value="lokichogio">Lokichogio</option>
+                        <option value="lokitaung">Lokitaung</option>
+                        <option value="kainuk">Kainuk</option>
+                        <option value="kalobeyei">Kalobeyei</option>
+                        <option value="other">Other Area</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiry-type">Type of Inquiry *</label>
+                    <select id="inquiry-type" name="inquiry-type" required>
+                        <option value="">Select inquiry type</option>
+                        <option value="scholarship">Scholarship Information</option>
+                        <option value="university">University Admission</option>
+                        <option value="college">College Placement</option>
+                        <option value="vocational">Vocational Training</option>
+                        <option value="bursary">Bursary Application</option>
+                        <option value="career">Career Guidance</option>
+                        <option value="other">Other Education Matter</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Detailed Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Please describe your educational inquiry in detail..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit to County Education Office</button>
+            </form>
+        </section>
+
+        <!-- Emergency Education Support -->
+        <section class="emergency-section">
+            <div class="emergency-card">
+                <h2>🚨 Urgent Education Matters</h2>
+                <p>For urgent admission issues, scholarship deadlines, or time-sensitive educational matters:</p>
+                <div class="emergency-contacts">
+                    <div class="emergency-contact">
+                        <strong>Education Hotline:</strong> +254 700 000 005
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Emergency WhatsApp:</strong> +254 700 000 006
+                    </div>
+                </div>
+                <p class="emergency-note">Available during critical application periods and education emergencies only.</p>
+            </div>
+        </section>
+
+        <!-- Project Developers (Optional Section) -->
+        <section class="developers-section">
+            <h2>💻 About This Platform</h2>
+            <div class="developers-card">
+                <h3>Turkana Scholar Pathfinder Initiative</h3>
+                <p>This educational platform was developed to support Turkana County students in accessing higher education opportunities. The platform is maintained in collaboration with the Turkana County Education Office.</p>
+                
+                <div class="platform-info">
+                    <h4>Platform Features:</h4>
+                    <ul>
+                        <li>Comprehensive university and college directory</li>
+                        <li>Course requirements and admission guidelines</li>
+                        <li>Scholarship and bursary information</li>
+                        <li>Career guidance and educational planning</li>
+                    </ul>
+                </div>
+                
+                <div class="technical-contact">
+                    <h4>Technical Support:</h4>
+                    <p>For technical issues with this website, contact the development team at: <strong>techsupport@turkana-scholar.org</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
